@@ -6,6 +6,9 @@ on:
       - 'v*' # "v" で始まるタグに反応します (例: v1.0.0)
   workflow_dispatch: # 手動トリガーも有効化
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: windows-latest
