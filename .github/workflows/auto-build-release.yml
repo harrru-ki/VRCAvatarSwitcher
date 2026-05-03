@@ -23,7 +23,6 @@ jobs:
 
       # 依存関係を復元
       - name: Restore dependencies
-        run: dotnet restore
         run: |
           dotnet restore .\getAuthToken\getAuthToken.csproj
           dotnet restore .\getOwnAvatarList\getOwnAvatarList.csproj
