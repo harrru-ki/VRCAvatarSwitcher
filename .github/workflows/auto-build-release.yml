@@ -24,6 +24,13 @@ jobs:
       # 依存関係を復元
       - name: Restore dependencies
         run: dotnet restore
+        run: |
+          dotnet restore .\getAuthToken\getAuthToken.csproj
+          dotnet restore .\getOwnAvatarList\getOwnAvatarList.csproj
+          dotnet restore .\switchAvatarRandomly\switchAvatarRandomly.csproj
+          dotnet restore .\switchEachAvatar\switchEachAvatar.csproj
+          dotnet restore .\worldAvatarSwitcher\worldAvatarSwitcher.csproj
+          dotnet restore .\revokeAuthToken\revokeAuthToken.csproj
 
       # プロジェクトを AOT コンパイル
       - name: Publish AOT Build for win-x64
