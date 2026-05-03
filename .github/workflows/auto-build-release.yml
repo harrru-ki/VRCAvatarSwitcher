@@ -27,7 +27,6 @@ jobs:
 
       # プロジェクトを AOT コンパイル
       - name: Publish AOT Build for win-x64
-      - name: Run multi-line commands
         run: |
           dotnet publish .\getAuthToken\getAuthToken.csproj                 -c Release -r win-x64 /p:PublishAot=true /p:SelfContained=true /p:PublishSingleFile=true /p:PublishTrimmed=true -o publish\win-x64
           dotnet publish .\getOwnAvatarList\getOwnAvatarList.csproj         -c Release -r win-x64 /p:PublishAot=true /p:SelfContained=true /p:PublishSingleFile=true /p:PublishTrimmed=true -o publish\win-x64
